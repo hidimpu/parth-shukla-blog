@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: ` Parth Shukla's Blog`,
     author: {
       name: ` Parth Shukla `,
-      summary: `who lives and works in San Francisco building useful things.`
+      summary: ` a follow up blog to my portfolio website (https://parthshukla.netlify.app/) for some code explainations and random blogs to share some information :)  `
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: ` `,
+    siteUrl: `https://parthshukla.netlify.app/`,
     social: {
-      twitter: `kylemathews`
+      twitter: `techdimpu`
     }
   },
   plugins: [
