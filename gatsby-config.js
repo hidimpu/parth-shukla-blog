@@ -3,7 +3,7 @@ module.exports = {
     title: ` Parth Shukla's Blog`,
     author: {
       name: ` Parth Shukla `,
-      summary: ` a follow up blog to my portfolio website (https://parthshukla.netlify.app/) for some code explainations and random blogs to share some information :)  `
+      summary: ` a follow up blog to my portfolio website [https://parthshukla.netlify.app/] for some code explainations and random blogs to share some information :)  `
     },
     description: ` `,
     siteUrl: `https://parthshukla.netlify.app/`,
