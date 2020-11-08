@@ -1,0 +1,57 @@
+{
+  "preview": [
+    {
+      "views": [
+        {
+          "id": "codesandbox.browser"
+        },
+        {
+          "id": "codesandbox.browser",
+          "closeable": true,
+          "options": {
+            "url": "/___graphql",
+            "title": "GraphiQL"
+          }
+        },
+        {
+          "id": "codesandbox.browser",
+          "options": {
+            "port": 50400,
+            "url": "https://w3mxe-50400.sse.codesandbox.io"
+          },
+          "closeable": true
+        },
+        {
+          "id": "codesandbox.browser",
+          "options": {
+            "port": 46033,
+            "url": "https://w3mxe-46033.sse.codesandbox.io"
+          },
+          "closeable": true
+        },
+        {
+          "id": "codesandbox.browser",
+          "options": {
+            "port": 34485,
+            "url": "https://w3mxe-34485.sse.codesandbox.io"
+          },
+          "closeable": true
+        }
+      ]
+    },
+    {
+      "open": true,
+      "views": [
+        {
+          "id": "codesandbox.terminal"
+        },
+        {
+          "id": "codesandbox.console"
+        },
+        {
+          "id": "codesandbox.problems"
+        }
+      ]
+    }
+  ]
+}
