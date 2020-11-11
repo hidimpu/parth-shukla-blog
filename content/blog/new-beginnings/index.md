@@ -1,108 +1,54 @@
 ---
-title: New Beginnings
-date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+title: Spotify-Downloader
+date: "2020-11-11"
+description: A simple Breakdown of how I made my Spotify-Downloader using simple Python Scripting.
 ---
 
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+##About the Project
 
-## On deer horse aboard tritely yikes and much
+Spotify Downloader is a script that I made using Python that takes Spotify URLs as input and provide the mp3 of a particular song
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+On a side note:
+It is only for personal use and not to be used commercially
+I'm not responsible for any non-ethical use of this application.
 
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
+####<a href="https://github.com/hidimpu/Spotify-Downloader"> Look the code at original GitHub Repo <u> Here! </u> </a>
 
-When she reached the first hills of the **Italic Mountains**, she had a last
-view back on the skyline of her hometown _Bookmarksgrove_, the headline of
-[Alphabet Village](http://google.com) and the subline of her own road, the Line
-Lane. Pityful a rhetoric question ran over her cheek, then she continued her
-way. On her way she met a copy.
+> Preparation
 
-### Overlaid the jeepers uselessly much excluding
+We all know that Spotify Officially streams the song to client with their own proprietary encryption methods which is nearly impossible as well illegal to decode or download.
 
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-[Longe and Parole](http://google.com) and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.
+##So how do we extract the mp3?
 
-> Far far away, behind the word mountains, far from the countries Vokalia and
-> Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-> right at the coast of the Semantics, a large language ocean.
+Well there is a sneaky way to ethically fetch the mp3 of pretty much any distributed song.
+Were going to take help of YouTube.Chances are way less if its not published on youtube or have different keywords as the name
 
-It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.
+###Step 1 : Fetching the Names of the Song!
 
-### According a funnily until pre-set or arrogant well cheerful
+Here the Parsed the spotify URL to fetch the Title of song and the name of the artists involved in order to get the most accurate results out of YouTube such that the result index of the searches gives the desired song at the first position.
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+###Step 2: Looking through YouTube!
 
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
-3.  Dear foresaw hungry and much some overhung
-4.  Rash opossum less because less some amid besides yikes jeepers frenetic
-    impassive fruitlessly shut
+Here, I replaced the spaces in the song Title and the Artist names with the "+" sign in order to concatinate with the base youtube search URL that gives the indexing of the results on the web page.
 
-When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rhetoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.
+Youtube Base URL: 'https://www.youtube.com/results?search_query='
+Song Name to input : 'ncs alan walker faded'
 
-> The copy warned the Little Blind Text, that where it came from it would have
-> been rewritten a thousand times and everything that was left from its origin
-> would be the word "and" and the Little Blind Text should turn around and
-> return to its own, safe country.
+The resultant string URL to be fetched by our program: 'https://www.youtube.com/results?search_query=ncs+alan+walker+faded'
 
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.
+###Step 3: Getting the Song
 
-#### Silent delightfully including because before one up barring chameleon
+Since the keywords we are searching on youtube are the most accurate of the desired song, there is a great probability that the song is going to show up on the first result of the youtube.
 
-Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.
+Furthermore, we take the video ID from the first result and again added into a base YouTube URL, similarly we did above.
+Final video URL: 'https://www.youtube.com/watch?v=bM7SZ5SBzyY'
 
-Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
+###Step 4: Extracting the mp3
 
-##### Wherever far wow thus a squirrel raccoon jeez jaguar this from along
+Since we have the webpage of the data we have fetched of the song, we can take help of FFMPEG or youtube-dl to download and convert that song into highest mp3 size possible.
+In this case, I have used FFMPEG that converts the web video format into mp3 and the download starts into the computer.
 
-She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rhetoric question ran over her cheek, then she continued her way. On her way she
-met a copy.
+## Conclusion
 
-###### Slapped cozy a that lightheartedly and far
-
-The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word "and" and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.
+This was a simple breakdown and the thought process that went behind making this script and project.
+I did explained the core logic here and the whole code is open source as well as available on Github. Feel free to contribute and test this cool script :)
